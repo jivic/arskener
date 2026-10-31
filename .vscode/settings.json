@@ -8,6 +8,26 @@
         "/^npx --yes markdownlint-cli2 --fix \"\\*\\*/\\*\\.md\"$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^git remote get-url origin; git status --short; Get-ChildItem -Path docs -Recurse -File \\| Select-Object -ExpandProperty FullName$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^if \\(Get-Command mkdocs -ErrorAction SilentlyContinue\\) \\{ mkdocs build --strict \\} else \\{ 'MkDocs CLI is not installed; build validation unavailable\\.' \\}$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^python -m venv \\.venv; if \\(\\$LASTEXITCODE -ne 0\\) \\{ throw 'Failed to create \\.venv\\.' \\}; \\.\\\\\\.venv\\\\Scripts\\\\python\\.exe -m pip install mkdocs-material; if \\(\\$LASTEXITCODE -ne 0\\) \\{ throw 'Failed to install mkdocs-material\\.' \\}; \\.\\\\\\.venv\\\\Scripts\\\\python\\.exe -m pip freeze \\| Set-Content -Path requirements\\.txt -Encoding Ascii; if \\(\\$LASTEXITCODE -ne 0\\) \\{ throw 'Failed to write requirements\\.txt\\.' \\}; \\.\\\\\\.venv\\\\Scripts\\\\mkdocs\\.exe --version$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^\\.\\\\\\.venv\\\\Scripts\\\\mkdocs\\.exe build --strict$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^git check-ignore -v site/index\\.html; git status --short; \\.\\\\\\.venv\\\\Scripts\\\\mkdocs\\.exe --version$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }

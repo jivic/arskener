@@ -1,0 +1,58 @@
+site_name: AR Skener
+site_description: Projektová dokumentácia AR skenera potravín a analýzy zloženia podľa diétnych potrieb
+site_author: Jozef Ivic
+repo_url: https://github.com/jivic/arskener
+repo_name: jivic/arskener
+
+theme:
+  name: material
+  language: sk
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Prepnúť na tmavý režim
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Prepnúť na svetlý režim
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - tables
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+
+nav:
+  - Biznis:
+      - Konkurenčná analýza: 01-business/competitive-analysis.md
+
