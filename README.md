@@ -4,7 +4,7 @@ Systém pre AR skenovanie a analýzu potravín podľa diétnych potrieb použív
 
 ## 1. Koncepcia projektu a riadenie agentov
 
-Projekt funguje na princípe **Spec-Driven Development** (vývoj riadený špecifikáciami) a **Task-Driven Handoffs**. Žiaden kód v produkčnom priečinku `src/` sa nevytvára bez predchádzajúceho definovania a schválenia požiadaviek v príslušných špecifikačných vrstvách.
+Projekt funguje na princípe **Spec-Driven Development** (vývoj riadený špecifikáciami) a práce rozdelenej medzi špecializované roly. V VS Code používateľ vyberá agenta podľa fázy a pred pokračovaním do ďalšej fázy schvaľuje výstup. Žiaden kód v produkčnom priečinku `src/` sa nevytvára bez predchádzajúceho definovania a schválenia požiadaviek v príslušných špecifikačných vrstvách.
 
 Celý životný cyklus je rozdelený medzi špecializované roly agentov:
 
@@ -12,8 +12,8 @@ Celý životný cyklus je rozdelený medzi špecializované roly agentov:
 | :--- | :--- | :--- | :--- | :--- |
 | **1. Biznis** | **Business Analyst** | Zadanie od používateľa | `docs/01-business/` | Schválenie biznis logiky a cieľov |
 | **2. Architektúra** | **System Architect** | `docs/01-business/` | `docs/02-architecture/` | Schválenie systémového návrhu a ADR |
-| **3. Bezpečnosť** | **Security Officer** | `docs/01/`, `docs/02/` | `docs/04-security/` | Schválenie bezpečnostných pravidiel a limitov |
-| **4. Technický dizajn** | **Tech Lead** | `docs/01/`, `02/`, `04/` | `docs/03-technical/` | Schválenie technického rozpadu a rozhraní |
+| **3. Bezpečnosť** | **Security Officer** | `docs/01-business/`, `docs/02-architecture/` | `docs/04-security/` | Schválenie bezpečnostných pravidiel a limitov |
+| **4. Technický dizajn** | **Tech Lead** | `docs/01-business/`, `docs/02-architecture/`, `docs/04-security/` | `docs/03-technical/` | Schválenie technického rozpadu a rozhraní |
 | **5. Vývoj** | **Software Engineer** | Všetky `docs/` | `src/` | Code review a súlad so špecifikáciou |
 | **6. QA & Testy** | **QA Engineer** | `docs/`, `src/` | `tests/` | Úspešné zbehnutie testov a reporty |
 | **7. Nasadenie** | **DevOps Engineer** | `src/`, `tests/` | `deploy/` | Konfigurácia kontajnerov a CI/CD |
@@ -23,19 +23,20 @@ Celý životný cyklus je rozdelený medzi špecializované roly agentov:
 
 ```text
 ARSkener/
-├── .agent-roles/                  # Definície a inštrukcie pre jednotlivých agentov
-│   ├── business-analyst.md        # Rola: Biznis analytik / Product Owner
-│   ├── system-architect.md        # Rola: Softvérový architekt
-│   ├── security-officer.md        # Rola: Bezpečnostný špecialista
-│   ├── tech-lead.md               # Rola: Technický dizajnér
-│   ├── software-engineer.md       # Rola: Vývojár
-│   ├── qa-engineer.md             # Rola: Tester / QA
-│   ├── devops-engineer.md         # Rola: Deployment & Infra
-│   └── technical-writer.md       # Rola: Dokumentačný špecialista
+├── .github/                       # Inštrukcie a konfigurácia pre GitHub Copilot vo VS Code
+│   ├── agents/                    # Workspace custom agents
+│   │   ├── business-analyst.agent.md
+│   │   ├── system-architect.agent.md
+│   │   ├── security-officer.agent.md
+│   │   ├── tech-lead.agent.md
+│   │   ├── software-engineer.agent.md
+│   │   ├── qa-engineer.agent.md
+│   │   ├── devops-engineer.agent.md
+│   │   └── technical-writer.agent.md
+│   └── copilot-instructions.md    # Spoločné pravidlá projektu
 │
-├── tasks/                         # ŽIVÉ TICKETY ÚLOH (Task Handoffs)
-│   ├── TASK-001-portfolio-monitor.md   # [DONE] Jadro, zber dát, alerty
-│   └── TASK-002-technical-documentation.md # [IN PROGRESS] Dokumentačný portál
+├── tasks/                         # Voliteľné tickety pre konkrétne úlohy
+│   └── TASK-xxx.md                # Zakladá sa iba pre dohodnutú úlohu
 │
 ├── docs/                          # ŠPECIFIKÁCIE & DOKUMENTÁCIA (Pre MkDocs)
 │   ├── 01-business/               # Agent: Business Analyst
@@ -88,8 +89,8 @@ ARSkener/
 
 1. **Zákaz nešpecifikovaného kódu:** Žiadny modul v `src/` nesmie byť vytvorený skôr, ako má zodpovedajúcu schválenú špecifikáciu v `docs/`.
 2. **Izolácia zápisov:** Každý agent modifikuje výhradne svoje pridelené adresáre.
-3. **Pravidlo odovzdania (Task Handoff):** Postup práce sa riadi tiketom v `tasks/TASK-xxx.md`.
-4. **Povinný Git commit po schválení:** Každý agent po odsúhlasení svojej etapy používateľom aktualizuje tiket úlohy v `tasks/` a vykoná štruktúrovaný Git commit (a push) pred odovzdaním štafety ďalšiemu agentovi.
+3. **Odovzdanie medzi rolami:** Agenti pracujú po etapách; ďalšia rola pokračuje až po schválení výstupu používateľom. Ticket v `tasks/` sa aktualizuje iba vtedy, ak pre úlohu existuje.
+4. **Git operácie:** Agent nevykonáva commit ani push bez výslovnej požiadavky používateľa.
 5. **Definition of Done (DoD):** Každá úloha musí spĺňať:
    - Schválenú biznis špecifikáciu (`docs/01-business/`).
    - Architektonické a bezpečnostné posúdenie (`docs/02-architecture/`, `docs/04-security/`).
