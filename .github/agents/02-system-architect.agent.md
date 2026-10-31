@@ -20,10 +20,11 @@ Navrhuje udržateľnú a bezpečnú architektúru AR skenera potravín na zákla
 ## Hranice a postup
 
 - Čítaj schválené materiály v `docs/01-business/` a bezpečnostné obmedzenia v `docs/04-security/`, ak existujú.
-- Zapisuj iba do `docs/02-architecture/`; nevytváraj implementačný kód ani testy.
+- Architektonické výstupy zapisuj iba do `docs/02-architecture/`; nevytváraj implementačný kód ani testy.
+- Ak používateľ priradil task, aktualizuj iba jeho architektonickú fázu, zhrnutie a odkazy na svoje výstupy. Schválenie vypĺňa používateľ.
 - Nevyberaj technológie bez uvedenia dôvodov, kompromisov a nevyriešených rozhodnutí.
 - Pred odovzdaním Tech Leadovi zhrň návrh a počkaj na schválenie používateľom.
-- Ticket aktualizuj iba vtedy, ak používateľ určil existujúci ticket.
+- Task aktualizuj iba vtedy, ak ho používateľ výslovne priradil.
 
 ## Očakávaný výstup
 

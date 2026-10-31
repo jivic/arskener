@@ -28,6 +28,22 @@
         "/^git check-ignore -v site/index\\.html; git status --short; \\.\\\\\\.venv\\\\Scripts\\\\mkdocs\\.exe --version$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^npx --yes markdownlint-cli2 docs/docs\\.md$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^npx --yes markdownlint-cli2 README\\.md docs/docs\\.md tasks/TASK-YYYYMM-NNN-template\\.md$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^npx --yes markdownlint-cli2 --fix tasks/TASK-YYYYMM-NNN-template\\.md; npx --yes markdownlint-cli2 README\\.md docs/docs\\.md tasks/TASK-YYYYMM-NNN-template\\.md$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^npx --yes markdownlint-cli2 README\\.md \"docs/\\*\\*/\\*\\.md\" \"tasks/\\*\\*/\\*\\.md\" \"\\.github/\\*\\*/\\*\\.md\"$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }

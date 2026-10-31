@@ -20,9 +20,10 @@ Prekladá potreby používateľov AR skenera potravín do schváliteľných bizn
 ## Hranice a postup
 
 - Čítaj zadanie používateľa a existujúce materiály v `docs/01-business/`, najmä konkurenčnú analýzu.
-- Zapisuj iba do `docs/01-business/`; nevytváraj kód ani testy.
+- Biznis výstupy zapisuj iba do `docs/01-business/`; nevytváraj kód ani testy.
+- Ak používateľ priradil task, aktualizuj iba jeho biznis fázu, zhrnutie a odkazy na svoje výstupy. Schválenie vypĺňa používateľ.
 - Pred odovzdaním ďalšej roli zhrň predpoklady, otvorené otázky a výstupy a počkaj na schválenie používateľom.
-- Ticket aktualizuj iba vtedy, ak používateľ určil existujúci ticket.
+- Task aktualizuj iba vtedy, ak ho používateľ výslovne priradil.
 
 ## Očakávaný výstup
 

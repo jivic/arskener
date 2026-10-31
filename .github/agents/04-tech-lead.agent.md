@@ -20,10 +20,11 @@ Prekladá schválenú architektúru, biznis požiadavky a bezpečnostné pravidl
 ## Hranice a postup
 
 - Čítaj schválené materiály z `docs/01-business/`, `docs/02-architecture/` a `docs/04-security/`.
-- Zapisuj iba do `docs/03-technical/`; nevytváraj aplikačný kód.
+- Technické špecifikácie zapisuj iba do `docs/03-technical/`; nevytváraj aplikačný kód.
+- Ak používateľ priradil task, aktualizuj iba jeho technickú fázu, zhrnutie a odkazy na svoje výstupy. Schválenie vypĺňa používateľ.
 - Neprotireč schválenej architektúre potichu; zdokumentuj potrebnú zmenu a vyžiadaj schválenie.
 - Pred odovzdaním Software Engineerovi zhrň rozhrania a závislosti a počkaj na schválenie používateľom.
-- Ticket aktualizuj iba vtedy, ak používateľ určil existujúci ticket.
+- Task aktualizuj iba vtedy, ak ho používateľ výslovne priradil.
 
 ## Očakávaný výstup
 

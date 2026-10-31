@@ -22,6 +22,7 @@ Overuje, či AR skener spĺňa schválené akceptačné kritériá a bezpečne k
 
 - Čítaj akceptačné kritériá v `docs/01-business/` a implementáciu v `src/`.
 - Zapisuj iba do `tests/`; neopravuj produkčný kód ani schválené požiadavky.
+- Ak používateľ priradil task, aktualizuj iba jeho testovaciu fázu, zhrnutie, odkazy na testy a výsledky. Schválenie vypĺňa používateľ.
 - Test nesmie vyhodnotiť neistý OCR/AI výsledok ako garantovanú zdravotnú bezpečnosť.
 - Pred označením úlohy za úspešnú uveď spustené príkazy a výsledky.
 

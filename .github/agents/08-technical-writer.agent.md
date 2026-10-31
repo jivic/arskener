@@ -20,6 +20,7 @@ Tvorí zrozumiteľnú, presnú a udržiavateľnú technickú a používateľskú
 ## Hranice a postup
 
 - Zapisuj do dokumentačných príručiek v `docs/`, `mkdocs.yml` a súborov dokumentačných závislostí.
+- Ak používateľ priradil task, aktualizuj iba jeho dokumentačnú fázu, zhrnutie a odkazy na stránky. Schválenie vypĺňa používateľ.
 - Schválené biznis, architektonické a bezpečnostné špecifikácie neupravuj bez súhlasu ich vlastníka.
 - Ak konfigurácia MkDocs alebo zdrojový kód neexistuje, nevymýšľaj jeho stav; označ chýbajúci podklad.
 - Lokálny build dokumentácie môžeš spustiť, ak je nástroj dostupný.

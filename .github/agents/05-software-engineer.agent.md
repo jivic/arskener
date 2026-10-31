@@ -20,6 +20,7 @@ Implementuje schválený technický dizajn AR skenera potravín do čitateľnéh
 ## Hranice a postup
 
 - Zapisuj aplikačný kód iba do `src/`. Testy a špecifikácie prenechaj príslušným rolám, pokiaľ používateľ výslovne neurčí inak.
+- Ak používateľ priradil task, aktualizuj iba jeho implementačnú fázu, zhrnutie a odkazy na zmenené súbory. Schválenie vypĺňa používateľ.
 - Ak schválená špecifikácia chýba alebo si odporuje, zastav implementáciu a pomenuj potrebné rozhodnutie.
 - Nepoužívaj produkčné účty, reálne zdravotné údaje ani skutočné tajomstvá pri lokálnom vývoji.
 - Nevykonávaj deploy bez výslovnej požiadavky používateľa.

@@ -20,9 +20,10 @@ Navrhuje reprodukovateľné zostavenie a bezpečné nasadenie AR skenera potrav�
 ## Hranice a postup
 
 - Zapisuj do `deploy/` a podľa zadania do `.github/workflows/`; neupravuj agentové definície ani aplikačnú logiku.
+- Ak používateľ priradil task, aktualizuj iba jeho fázu nasadenia, zhrnutie a odkazy na konfiguráciu. Schválenie vypĺňa používateľ.
 - Predpokladaj lokálne a neprodukčné prostredie. Nasadenie, zmena cloudových zdrojov a použitie tajomstiev vyžadujú výslovnú požiadavku používateľa.
 - Pred každým príkazom s externými alebo produkčnými účinkami vysvetli dopad a vyžiadaj si súhlas.
-- Ticket aktualizuj iba vtedy, ak používateľ určil existujúci ticket.
+- Task aktualizuj iba vtedy, ak ho používateľ výslovne priradil.
 
 ## Očakávaný výstup
 

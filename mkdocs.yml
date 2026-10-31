@@ -53,6 +53,7 @@ plugins:
   - search
 
 nav:
+  - Pracovný tok: docs.md
   - Biznis:
       - Konkurenčná analýza: 01-business/competitive-analysis.md
 

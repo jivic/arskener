@@ -25,20 +25,21 @@ Celý životný cyklus je rozdelený medzi špecializované roly agentov:
 ARSkener/
 ├── .github/                       # Inštrukcie a konfigurácia pre GitHub Copilot vo VS Code
 │   ├── agents/                    # Workspace custom agents
-│   │   ├── business-analyst.agent.md
-│   │   ├── system-architect.agent.md
-│   │   ├── security-officer.agent.md
-│   │   ├── tech-lead.agent.md
-│   │   ├── software-engineer.agent.md
-│   │   ├── qa-engineer.agent.md
-│   │   ├── devops-engineer.agent.md
-│   │   └── technical-writer.agent.md
+│   │   ├── 01-business-analyst.agent.md
+│   │   ├── 02-system-architect.agent.md
+│   │   ├── 03-security-officer.agent.md
+│   │   ├── 04-tech-lead.agent.md
+│   │   ├── 05-software-engineer.agent.md
+│   │   ├── 06-qa-engineer.agent.md
+│   │   ├── 07-devops-engineer.agent.md
+│   │   └── 08-technical-writer.agent.md
 │   └── copilot-instructions.md    # Spoločné pravidlá projektu
 │
 ├── tasks/                         # Voliteľné tickety pre konkrétne úlohy
-│   └── TASK-xxx.md                # Zakladá sa iba pre dohodnutú úlohu
+│   └── TASK-YYYYMM-NNN-template.md # Šablóna na vytvorenie centrálneho tasku
 │
 ├── docs/                          # ŠPECIFIKÁCIE & DOKUMENTÁCIA (Pre MkDocs)
+│   ├── docs.md                    # Pracovný tok taskov a agentov
 │   ├── 01-business/               # Agent: Business Analyst
 │   │   ├── competitive-analysis.md # Konkurenčná analýza a produktový koncept
 │   │   ├── requirements.md        # Funkčné a nefunkčné požiadavky
@@ -89,7 +90,7 @@ ARSkener/
 
 1. **Zákaz nešpecifikovaného kódu:** Žiadny modul v `src/` nesmie byť vytvorený skôr, ako má zodpovedajúcu schválenú špecifikáciu v `docs/`.
 2. **Izolácia zápisov:** Každý agent modifikuje výhradne svoje pridelené adresáre.
-3. **Odovzdanie medzi rolami:** Agenti pracujú po etapách; ďalšia rola pokračuje až po schválení výstupu používateľom. Ticket v `tasks/` sa aktualizuje iba vtedy, ak pre úlohu existuje.
+3. **Odovzdanie medzi rolami:** Pre úlohu sa použije jeden centrálny súbor `tasks/TASK-YYYYMM-NNN.md`, ktorý sa medzi agentmi nepremiestňuje. Používateľ ručne vyberá agentov a schvaľuje výstupy; vytvorenie ticketu agenta automaticky nespúšťa.
 4. **Git operácie:** Agent nevykonáva commit ani push bez výslovnej požiadavky používateľa.
 5. **Definition of Done (DoD):** Každá úloha musí spĺňať:
    - Schválenú biznis špecifikáciu (`docs/01-business/`).

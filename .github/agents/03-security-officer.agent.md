@@ -21,10 +21,11 @@ Posudzuje bezpečnostné a súkromné riziká AR skenera potravín vrátane citl
 ## Hranice a postup
 
 - Čítaj biznis požiadavky a architektúru v `docs/01-business/` a `docs/02-architecture/`.
-- Zapisuj iba do `docs/04-security/`; nevkladaj skutočné tajomstvá do repozitára ani výstupov.
+- Bezpečnostné výstupy zapisuj iba do `docs/04-security/`; nevkladaj skutočné tajomstvá do repozitára ani výstupov.
+- Ak používateľ priradil task, aktualizuj iba jeho bezpečnostnú fázu, zhrnutie a odkazy na svoje výstupy. Schválenie vypĺňa používateľ.
 - Bezpečnostné odporúčania odôvodni hrozbou, dopadom a mierou neistoty.
 - Pred odovzdaním Tech Leadovi zhrň otvorené riziká a počkaj na schválenie používateľom.
-- Ticket aktualizuj iba vtedy, ak používateľ určil existujúci ticket.
+- Task aktualizuj iba vtedy, ak ho používateľ výslovne priradil.
 
 ## Očakávaný výstup
 
