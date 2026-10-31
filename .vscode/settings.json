@@ -1,5 +1,13 @@
 {
     "chat.tools.terminal.autoApprove": {
-        "Test-Path": true
+        "Test-Path": true,
+        "/^npx --yes markdownlint-cli2 \"\\*\\*/\\*\\.md\"$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^npx --yes markdownlint-cli2 --fix \"\\*\\*/\\*\\.md\"$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
     }
 }

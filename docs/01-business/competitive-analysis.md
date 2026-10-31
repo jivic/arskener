@@ -84,6 +84,6 @@ PWA je vhodná na rýchle a lacnejšie overenie trhu. Po potvrdení ochoty záka
 | Vývoj a testovanie MVP | UI/UX, natívny vývoj pre iOS a Android, AR a OCR moduly, integrácia LLM a zabezpečený backend | 40 000–70 000 € |
 | Marketing a uvedenie na trh | Výkonnostný marketing, PR pre cieľové komunity a spolupráca s odborníkmi na výživu | 15 000–25 000 € |
 | Prevádzkové náklady počas prvého roka | Cloud, API tretích strán, priebežná údržba aplikácie a aktualizácia databáz | 20 000–30 000 € |
-| **Spolu: spustenie a prvý rok prevádzky** |  | **75 000–125 000 €** |
+| **Spolu: spustenie a prvý rok prevádzky** | | **75 000–125 000 €** |
 
 Samostatný odhad vývoja PWA MVP je 15 000–30 000 €. Nejde o súčasť vyššie uvedeného rozpočtu natívneho variantu. PWA môže znížiť počiatočné náklady na vývoj, jej cloudové prevádzkové náklady však môžu rásť s používaním.
