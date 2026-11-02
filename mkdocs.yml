@@ -55,5 +55,6 @@ plugins:
 nav:
   - Pracovný tok: docs.md
   - Biznis:
+      - Základné požiadavky: 01-business/requirements.md
       - Konkurenčná analýza: 01-business/competitive-analysis.md
 

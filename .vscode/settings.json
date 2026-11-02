@@ -1,4 +1,5 @@
 {
+    "files.eol": "\n",
     "chat.tools.terminal.autoApprove": {
         "Test-Path": true,
         "/^npx --yes markdownlint-cli2 \"\\*\\*/\\*\\.md\"$/": {
@@ -42,6 +43,10 @@
             "matchCommandLine": true
         },
         "/^npx --yes markdownlint-cli2 README\\.md \"docs/\\*\\*/\\*\\.md\" \"tasks/\\*\\*/\\*\\.md\" \"\\.github/\\*\\*/\\*\\.md\"$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^npx --yes markdownlint-cli2 docs/01-business/requirements\\.md tasks/TASK-202610-001\\.md$/": {
             "approve": true,
             "matchCommandLine": true
         }
